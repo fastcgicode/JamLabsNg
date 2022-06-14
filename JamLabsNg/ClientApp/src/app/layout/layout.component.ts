@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { IInput } from "../IInput";
+import { IInput } from "./IInput";
 
 @Component({
-  selector: 'app-frame',
-  templateUrl: './frame.component.html',
-  styleUrls: ['./frame.component.css']
+  selector: 'app-layout',
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.css']
 })
-export class FrameComponent implements OnInit {
+export class LayoutComponent implements OnInit {
   public buttons: IInput[] = [];
   public clickedButtonName: string = "";
 

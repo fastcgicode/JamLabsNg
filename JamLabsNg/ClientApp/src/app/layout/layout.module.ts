@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FrameComponent } from './frame/frame.component';
+import { LayoutComponent } from './layout.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ControlsComponent } from './controls/controls.component';
@@ -20,7 +20,7 @@ import { ButtonComponent } from "../sourcesButtons/button/button.component";
   ],
   exports: [],
   declarations: [
-    FrameComponent,
+    LayoutComponent,
     FooterComponent,
     HeaderComponent,
     SourcesComponent,
