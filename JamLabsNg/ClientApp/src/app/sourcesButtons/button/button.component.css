@@ -1,0 +1,12 @@
+.sourceButton {
+  width: 100px;
+  height: 70px;
+  color: #cccccc;
+  border: none;
+  line-height: 100px;
+  background-color: darkslateblue;
+  background-image: url("/assets/svg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 10px;
+}
