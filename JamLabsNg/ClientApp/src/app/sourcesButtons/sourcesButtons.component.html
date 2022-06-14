@@ -1,0 +1,5 @@
+<p>Clicked: {{clickedButtonName}}</p>
+<div *ngFor="let button of buttons">
+  <source-button [button]="button" (clickSource)="showButton($event)">
+  </source-button>
+</div>

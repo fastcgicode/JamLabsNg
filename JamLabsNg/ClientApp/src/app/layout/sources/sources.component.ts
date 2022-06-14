@@ -12,5 +12,4 @@ export class SourcesComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
