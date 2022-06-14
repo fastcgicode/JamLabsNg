@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IInput } from "../Input";
+import { IInput } from "../../layout/IInput";
 
 @Component({
   selector: 'source-button',

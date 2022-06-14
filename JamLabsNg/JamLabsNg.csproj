@@ -22,11 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\sourcesButtons\input.ts" />
+    <None Remove="ClientApp\src\app\sourcesButtons\IInput.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\sourcesButtons\Input.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\layout\IInput.ts" />
   </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

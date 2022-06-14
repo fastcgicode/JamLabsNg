@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IInput } from "../IInput";
 
 @Component({
   selector: 'app-sources',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sources.component.css']
 })
 export class SourcesComponent implements OnInit {
+  @Output() clickSource = new EventEmitter<IInput>();
+  @Input() buttons: IInput[];
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  sourceClick(button: IInput) {
+    this.clickSource.emit(button);
   }
 }

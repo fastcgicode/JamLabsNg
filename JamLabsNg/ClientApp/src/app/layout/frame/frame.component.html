@@ -3,7 +3,7 @@
     <app-header></app-header>
   </div>
   <div class="sources">
-    <app-sources></app-sources>
+    <app-sources [buttons]="buttons" (clickSource)="sourceClick($event)"></app-sources>
   </div>
   <div class="content">
       <div class="content-row">
@@ -11,6 +11,11 @@
       </div>
       <div class="canvas content-row">
         <router-outlet></router-outlet>
+        <div style="padding: 6px;">
+          <strong>Try Buttons:</strong><br />
+          Clicked: {{clickedButtonName}}<br />
+          <button (click)="addButton()">Add a button</button>
+        </div>
       </div>
       <div class="content-row">
         <app-controls></app-controls>
