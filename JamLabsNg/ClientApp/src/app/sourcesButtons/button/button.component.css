@@ -1,4 +1,5 @@
 .sourceButton {
+    position:relative;
   width: 130px;
   height: 76px;
   color: #cccccc;
@@ -9,4 +10,16 @@
   background-repeat: no-repeat;
   background-size: contain;
   margin: 10px;
+}
+
+.hiddenSvg {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: lightblue;
+  background-image: url("/assets/svg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 30px;
 }
