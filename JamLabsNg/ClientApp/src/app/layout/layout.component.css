@@ -1,12 +1,23 @@
+@media (min-width: 900px) {
+  .wrapper {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+body, html {
+  height: 100vh;
+  font-size: 0.7em;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   gap: 1px;
   grid-auto-rows: minmax(40px, auto);
   height: 100vh;
-  width: 100vw;
   min-height: 400px;
 }
+
 
 .header {
   grid-column: 1 / 17;
@@ -33,6 +44,7 @@
 
 .content {
   position: relative;
+  border: 1px solid blue;
   grid-column: 3 / 15;
   grid-row: 2;
   height: 100%;
@@ -57,7 +69,7 @@
 }
 
 .controls {
-  width:100%;
+  width: 100%;
 }
 
 .canvas {
@@ -68,5 +80,5 @@
   background-size: contain;
   aspect-ratio: 16 / 9;
   padding: 0px;
-  max-height:76%;
+  max-height: 76%;
 }
