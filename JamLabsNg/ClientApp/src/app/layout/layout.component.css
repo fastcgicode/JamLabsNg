@@ -2,21 +2,23 @@
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   gap: 1px;
-  grid-auto-rows: minmax(60px, auto);
+  grid-auto-rows: minmax(40px, auto);
+  height: 100vh;
+  min-height: 400px;
 }
 
 .header {
   grid-column: 1 / 17;
   border: 1px solid black;
   grid-row: 1;
-  padding: 6px;
+  padding: 3px;
 }
 
 .footer {
   grid-column: 1 / 17;
   border: 1px solid black;
   grid-row: 3;
-  padding: 6px;
+  padding: 3px;
 }
 
 .sources {
@@ -24,11 +26,15 @@
   border: 1px solid black;
   grid-row: 2;
   padding: 6px;
+  height: 100%;
+  width: 165px;
 }
 
 .content {
+  position: relative;
   grid-column: 3 / 15;
   grid-row: 2;
+  height: 100%;
 }
 
 .content-row {
@@ -41,12 +47,25 @@
   border: 1px solid black;
   grid-row: 2;
   padding: 6px;
+  height: 100%;
+  width: 165px;
+}
+
+.title {
+  max-height: 10%;
+}
+
+.controls {
+  width:100%;
 }
 
 .canvas {
   background-image: url('/assets/example-image-16x9.png');
+  border: 1px solid red;
   background-repeat: no-repeat;
+  overflow: hidden;
   background-size: contain;
   aspect-ratio: 16 / 9;
   padding: 0px;
+  max-height:76%;
 }

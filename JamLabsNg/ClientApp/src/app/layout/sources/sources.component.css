@@ -1,4 +1,6 @@
 .scroll {
+  overflow-x: hidden;
   overflow-y: auto;
+  text-align: center;
   height: 100%;
 }
