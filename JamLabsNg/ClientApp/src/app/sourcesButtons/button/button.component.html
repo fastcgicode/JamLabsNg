@@ -1,4 +1,6 @@
 <div class="sourceButton" (click)="sourceClick(button)">
-  <div class="hiddenSvg"></div>
-  <span>{{ button.name }}</span>
+  <div class="hidden-bg" [hidden]="false"></div>
+  <div class="inner-button" style="background-image: url(/assets/{{button.icon}}.png);">
+    <span>{{ button.name }}</span>
+  </div>
 </div>

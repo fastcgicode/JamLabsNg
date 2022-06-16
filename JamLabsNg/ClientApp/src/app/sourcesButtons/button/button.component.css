@@ -1,25 +1,34 @@
 .sourceButton {
-    position:relative;
-  width: 130px;
-  height: 76px;
+  position: relative;
+  width: 140px;
+  height: 75px;
   color: #cccccc;
   border: none;
   line-height: 100px;
   background-color: darkslateblue;
-  background-image: url("/assets/svg.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  padding-top: 13px;
   margin: 10px;
+  display: flex;
+  justify-content: center;
 }
 
-.hiddenSvg {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  background-color: lightblue;
+.inner-button {
+  width: 66px;
+  height: 40px;
+  background-color: #0094ff;
   background-image: url("/assets/svg.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 40px;
-  height: 30px;
+}
+
+.hidden-bg {
+  position: absolute;
+  top: 13px;
+  right: 4px;
+  background-color: #0094ff;
+  background-image: url("/assets/svg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 25px;
 }
