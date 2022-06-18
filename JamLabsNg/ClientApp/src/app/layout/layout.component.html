@@ -1,15 +1,14 @@
-<div class="wrapper">
+<div class="wrapper" (window:resize)="onResize()">
   <div class="header">
     <app-header></app-header>
   </div>
-  <div class="sources">
-    <app-sources [buttons]="buttons" (clickSource)="sourceClick($event)"></app-sources>
-  </div>
-  <div class="content">
-      <div class="title content-row">
-        <app-title></app-title>
-      </div>
-      <div class="canvas content-row">
+  <div>
+    <div class="sources" id="sources">
+      <app-sources [buttons]="buttons" (clickSource)="sourceClick($event)"></app-sources>
+    </div>
+    <div class="contents" id="contents">
+      <div class="title">TITLE</div>
+      <div class="canvas">
         <router-outlet></router-outlet>
         <div style="padding: 6px;">
           <strong>Try Buttons:</strong><br />
@@ -17,15 +16,13 @@
           <button (click)="addButton()">Add a button</button>
         </div>
       </div>
-      <div class="controls content-row">
-        <app-controls></app-controls>
-      </div>
-  </div>
-  <div class="destinations">
-    <app-destinations></app-destinations>
+      <app-controls></app-controls>
+    </div>
+    <div class="destinations" id="destinations">
+      <app-destinations></app-destinations>
+    </div>
   </div>
   <div class="footer">
-    <app-footer></app-footer>
+    FOOTER
   </div>
 </div>
-

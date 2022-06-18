@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { IInput } from "./IInput";
 
 @Component({
@@ -6,7 +6,7 @@ import { IInput } from "./IInput";
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, AfterViewChecked {
   public buttons: IInput[] = [];
   public clickedButtonName: string = "";
 
@@ -23,6 +23,26 @@ export class LayoutComponent implements OnInit {
         signal: true,
         icon: 1
       });
+    }
+  }
+
+  onResize() {
+    const c = document.getElementById("contents");
+    const s = document.getElementById("sources");
+    const d = document.getElementById("destinations");
+    if (c && s && d) {
+      s.style.height = c.offsetHeight + "px";
+      d.style.height = c.offsetHeight + "px";
+    }
+  }
+
+  ngAfterViewChecked() {
+    const c = document.getElementById("contents");
+    const s = document.getElementById("sources");
+    const d = document.getElementById("destinations");
+    if (c && s && d) {
+      s.style.height = c.offsetHeight + "px";
+      d.style.height = c.offsetHeight + "px";
     }
   }
 
