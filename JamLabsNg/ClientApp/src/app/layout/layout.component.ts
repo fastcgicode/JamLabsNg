@@ -8,6 +8,7 @@ import { IInput } from "./IInput";
 })
 export class LayoutComponent implements OnInit, AfterViewChecked {
   public buttons: IInput[] = [];
+  public destButtons: IInput[] = [];
   public clickedButtonName: string = "";
 
   constructor() {
@@ -18,7 +19,15 @@ export class LayoutComponent implements OnInit, AfterViewChecked {
       this.buttons.push({
         id: c.toString(),
         index: c,
-        name: "button" + c,
+        name: "sourcebutton" + c,
+        status: "active",
+        signal: true,
+        icon: 1
+      });
+      this.destButtons.push({
+        id: c.toString(),
+        index: c,
+        name: "destButton" + c,
         status: "active",
         signal: true,
         icon: 1
@@ -30,9 +39,12 @@ export class LayoutComponent implements OnInit, AfterViewChecked {
     const c = document.getElementById("contents");
     const s = document.getElementById("sources");
     const d = document.getElementById("destinations");
-    if (c && s && d) {
+    const cw = document.getElementById("canvas-wrapper");
+    const ca = document.getElementById("canvas");
+    if (c && s && d && cw && ca) {
       s.style.height = c.offsetHeight + "px";
       d.style.height = c.offsetHeight + "px";
+      ca.style.marginLeft = ((cw.offsetWidth - ca.offsetWidth) / 2) + "px";
     }
   }
 
@@ -40,13 +52,16 @@ export class LayoutComponent implements OnInit, AfterViewChecked {
     const c = document.getElementById("contents");
     const s = document.getElementById("sources");
     const d = document.getElementById("destinations");
-    if (c && s && d) {
+    const cw = document.getElementById("canvas-wrapper");
+    const ca = document.getElementById("canvas");
+    if (c && s && d && cw && ca) {
       s.style.height = c.offsetHeight + "px";
       d.style.height = c.offsetHeight + "px";
+      ca.style.marginLeft = ((cw.offsetWidth - ca.offsetWidth) / 2) + "px";
     }
   }
 
-  sourceClick(button: IInput) {
+  buttonClick(button: IInput) {
     this.clickedButtonName = button.name;
   }
 

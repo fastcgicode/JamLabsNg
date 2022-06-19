@@ -9,8 +9,8 @@ import { SourcesComponent } from './sources/sources.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutRoutingModule } from './layout-routing.module';
-import { SourcesButtonsComponent } from '../sourcesButtons/sourcesButtons.component';
-import { ButtonComponent } from "../sourcesButtons/button/button.component";
+import { SourcesButtonsComponent } from './sourcesButtons/sourcesButtons.component';
+import { ButtonComponent } from "./button/button.component";
 
 @NgModule({
   imports: [

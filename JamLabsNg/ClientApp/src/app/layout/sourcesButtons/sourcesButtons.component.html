@@ -1,0 +1,4 @@
+<div *ngFor="let button of buttons">
+  <ui-button [button]="button" (clickSource)="sourceClick($event)">
+  </ui-button>
+</div>

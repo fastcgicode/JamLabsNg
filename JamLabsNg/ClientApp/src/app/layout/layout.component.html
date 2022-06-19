@@ -4,25 +4,27 @@
   </div>
   <div>
     <div class="sources" id="sources">
-      <app-sources [buttons]="buttons" (clickSource)="sourceClick($event)"></app-sources>
+      <app-sources [buttons]="buttons" (clickButton)="buttonClick($event)"></app-sources>
     </div>
     <div class="contents" id="contents">
-      <div class="title">TITLE</div>
-      <div class="canvas">
-        <router-outlet></router-outlet>
-        <div style="padding: 6px;">
-          <strong>Try Buttons:</strong><br />
-          Clicked: {{clickedButtonName}}<br />
-          <button (click)="addButton()">Add a button</button>
+      <div class="title"><app-title></app-title></div>
+      <div id="canvas-wrapper">
+        <div class="canvas" id="canvas">
+          <router-outlet></router-outlet>
+          <div style="padding: 6px;">
+            <strong>Try Buttons:</strong><br />
+            Clicked: {{clickedButtonName}}<br />
+            <button (click)="addButton()">Add a button</button>
+          </div>
         </div>
       </div>
       <app-controls></app-controls>
     </div>
     <div class="destinations" id="destinations">
-      <app-destinations></app-destinations>
+      <app-destinations [buttons]="destButtons" (clickButton)="buttonClick($event)"></app-destinations>
     </div>
   </div>
   <div class="footer">
-    FOOTER
+    <app-footer></app-footer>
   </div>
 </div>
