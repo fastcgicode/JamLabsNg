@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\layout\sourcesButtons\IInput.ts" />
+    <None Remove="ClientApp\src\app\layout\button-list\IInput.ts" />
   </ItemGroup>
 
   <ItemGroup>

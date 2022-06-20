@@ -2,11 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IInput } from "../IInput";
 
 @Component({
-  selector: 'sources-buttons',
-  templateUrl: './sourcesButtons.component.html',
-  styleUrls: ['./sourcesButtons.component.css']
+  selector: 'button-list',
+  templateUrl: './button-list.component.html',
+  styleUrls: ['./button-list.component.css']
 })
-export class SourcesButtonsComponent implements OnInit {
+export class ButtonListComponent implements OnInit {
   @Output() clickButton = new EventEmitter<IInput>();
   @Input() buttons: IInput[];
 
@@ -15,7 +15,7 @@ export class SourcesButtonsComponent implements OnInit {
   ngOnInit() {
   }
 
-  sourceClick(button: IInput) {
+  buttonClick(button: IInput) {
     this.clickButton.emit(button);
   }
 }

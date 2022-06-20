@@ -9,7 +9,7 @@ import { SourcesComponent } from './sources/sources.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutRoutingModule } from './layout-routing.module';
-import { SourcesButtonsComponent } from './sourcesButtons/sourcesButtons.component';
+import { ButtonListComponent } from './button-list/button-list.component';
 import { ButtonComponent } from "./button/button.component";
 
 @NgModule({
@@ -24,7 +24,7 @@ import { ButtonComponent } from "./button/button.component";
     FooterComponent,
     HeaderComponent,
     SourcesComponent,
-    SourcesButtonsComponent,
+    ButtonListComponent,
     ButtonComponent,
     ControlsComponent,
     TitleComponent,

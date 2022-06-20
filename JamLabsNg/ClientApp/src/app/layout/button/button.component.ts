@@ -7,7 +7,7 @@ import { IInput } from "../../layout/IInput";
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  @Output() clickSource = new EventEmitter<IInput>();
+  @Output() clickButton = new EventEmitter<IInput>();
   @Input() button: IInput;
 
   constructor() { }
@@ -15,7 +15,7 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {
   }
 
-  sourceClick(buttonInput: IInput) {
-    this.clickSource.emit(buttonInput);
+  buttonClick(buttonInput: IInput) {
+    this.clickButton.emit(buttonInput);
   }
 }

@@ -7,7 +7,7 @@ import { IInput } from "./IInput";
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit, AfterViewChecked {
-  public buttons: IInput[] = [];
+  public sourcebuttons: IInput[] = [];
   public destButtons: IInput[] = [];
   public clickedButtonName: string = "";
 
@@ -16,7 +16,7 @@ export class LayoutComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     for (let c = 0; c < 16; c++) {
-      this.buttons.push({
+      this.sourcebuttons.push({
         id: c.toString(),
         index: c,
         name: "sourcebutton" + c,
@@ -66,8 +66,8 @@ export class LayoutComponent implements OnInit, AfterViewChecked {
   }
 
   addButton() {
-    let c = this.buttons.length;
-    this.buttons.push({
+    let c = this.sourcebuttons.length;
+    this.sourcebuttons.push({
       id: c.toString(),
       index: c,
       name: "button" + c,

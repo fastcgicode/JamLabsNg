@@ -16,7 +16,7 @@ export class DestinationsComponent implements OnInit {
   ngOnInit() {
   }
 
-  sourceButton(button: IInput) {
+  buttonClick(button: IInput) {
     this.clickButton.emit(button);
   }
 }
